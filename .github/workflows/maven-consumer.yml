@@ -23,4 +23,4 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file Simple-PactEnabled-Consumer/pom.xml
     - name: curl
-      run: curl -v -XPUT -H 'Content-Type":" application/json' --upload-file Simple-PactEnabled-Consumer/target/pacts/simple_consumer-simple_provider.json http://18.194.74.172:9292/pacts/provider/simple_provider/consumer/simple_consumer/version/0.0.0+q1w2e3r4
+      run: curl -v -XPUT -H 'Content-Type:application/json' --upload-file Simple-PactEnabled-Consumer/target/pacts/simple_consumer-simple_provider.json http://18.194.74.172:9292/pacts/provider/simple_provider/consumer/simple_consumer/version/0.0.0+q1w2e3r4
