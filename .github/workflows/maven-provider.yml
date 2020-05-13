@@ -29,4 +29,4 @@ jobs:
     - name: Set pact.provider.version to current short SHA
       run: echo "::set-env name=pact.provider.version::$GITHUB_SHA"
     - name: Build with Maven
-      run: mvn -B package --file Simple-PactEnabled-Provider/pom.xml
+      run: mvn -Dpact.verifier.publishResults=true -Dpact.provider.version::$GITHUB_SHA -B package --file Simple-PactEnabled-Provider/pom.xml
