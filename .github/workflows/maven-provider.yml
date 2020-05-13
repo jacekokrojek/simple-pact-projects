@@ -11,7 +11,7 @@ on:
   pull_request:
     branches: [ master ]
     paths:
-      - 'Simple-PactEnabled-Provider/*'  
+    - 'Simple-PactEnabled-Provider/*'  
 
 jobs:
   build:
