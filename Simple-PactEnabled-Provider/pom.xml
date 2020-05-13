@@ -6,7 +6,7 @@
 
     <groupId>com.testarmy.demos</groupId>
     <artifactId>Simple-PactEnabled-Provider</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.1-SNAPSHOT</version>
 
     <name>Simple-PactEnabled-Provider</name>
     <description>A simple Simple-PactEnabled-Provider.</description>
