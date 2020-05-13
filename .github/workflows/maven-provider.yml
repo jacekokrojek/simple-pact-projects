@@ -24,9 +24,9 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 11
-    - name: Set pact envs
-      run: echo '::set-env name=pact.provider.version::$(git rev-parse --short "$GITHUB_SHA")'
+    - name: Set pact pact.verifier.publishResults to true
       run: echo '::set-env name=pact.verifier.publishResults::true'
-
+    - name: Set pact.provider.version to current short SHA
+      run: echo '::set-env name=pact.provider.version::$(git rev-parse --short "$GITHUB_SHA")'
     - name: Build with Maven
       run: mvn -B package --file Simple-PactEnabled-Provider/pom.xml
