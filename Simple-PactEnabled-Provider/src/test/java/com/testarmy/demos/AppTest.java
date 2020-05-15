@@ -40,4 +40,9 @@ public class AppTest
     {
         assertTrue( true );
     }
+
+    public void testAppEvenMoreTimes()
+    {
+        assertTrue( true );
+    }
 }
