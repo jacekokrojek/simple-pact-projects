@@ -16,7 +16,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Set env variables
       env:
         VERSION: 0.0.0+$GITHUB_SHA
     - name: Set up JDK 11
