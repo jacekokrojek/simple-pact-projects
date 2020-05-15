@@ -12,6 +12,11 @@ on:
     branches: [ master ]
     paths:
     - 'Simple-PactEnabled-Provider/*'  
+  repository_dispatch:
+    branches: [ master ]
+    paths:
+    - 'Simple-PactEnabled-Provider/*'  
+
 
 jobs:
   build:
