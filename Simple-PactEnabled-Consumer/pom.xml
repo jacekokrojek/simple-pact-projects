@@ -6,7 +6,7 @@
 
   <groupId>com.testarmy.demos</groupId>
   <artifactId>Simple-PactEnabled-Consumer</artifactId>
-  <version>1.0.11-SNAPSHOT</version>
+  <version>1.0.12-SNAPSHOT</version>
 
   <name>Simple-PactEnabled-Consumer</name>
 

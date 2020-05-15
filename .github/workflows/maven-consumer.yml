@@ -25,7 +25,7 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file Simple-PactEnabled-Consumer/pom.xml
     - name: Publish cotracts to the Pact broker
-      run: mvn pact:publish 
+      run: mvn au.com.dius:pact-jvm-provider-maven:publish 
     #   run: curl -v -XPUT -H 'Content-Type:application/json' --upload-file Simple-PactEnabled-Consumer/target/pacts/simple_consumer-simple_provider.json http://18.194.74.172:9292/pacts/provider/simple_provider/consumer/simple_consumer/version/$VERSION
     # - name: Trigger provider build
     #   run: curl  -H "Authorization:token ${{ secrets.TOKEN }}" -H 'Accept:application/vnd.github.everest-preview+json' "https://api.github.com/repos/jacekokrojek/simple-pact-projects/dispatches" -d "{\"event_type\":\"Weryfikuje build providera dla consumera $VERSION\", \"client_payload\":{\"consumer\":\"simple_consumer\",\"version\":\"$VERSION\"}}"
