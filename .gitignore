@@ -1,6 +1,2 @@
 pact
 .vscode
-**/.settings
-**/target
-**/.classpath
-**/.project
