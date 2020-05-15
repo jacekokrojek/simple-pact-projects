@@ -28,7 +28,9 @@ jobs:
       run: mvn -B package --file Simple-PactEnabled-Consumer/pom.xml
     - name: curl
       run: curl -v -XPUT -H 'Content-Type:application/json' --upload-file Simple-PactEnabled-Consumer/target/pacts/simple_consumer-simple_provider.json http://18.194.74.172:9292/pacts/provider/simple_provider/consumer/simple_consumer/version/0.0.0+$GITHUB_SHA
-    - name: get pack-broker cli
+    - name: Trigger provider build
+      run: curl  -H "Authorization:token ${TOKEN}" -H 'Accept:application/vnd.github.everest-preview+json' "https://api.github.com/repos/jacekokrojek/simple-pact-projects/dispatches" -d '{"event_type":"awesomeness", "client_payload":{"foo":"bar"}}'
+    - name: Get pack-broker cli
       run: wget https://github.com/pact-foundation/pact-ruby-standalone/releases/download/v1.84.0/pact-1.84.0-linux-x86.tar.gz
     - name: unzip pack-broker cli
       run: tar -zxvf pact-1.84.0-linux-x86.tar.gz  
