@@ -41,7 +41,7 @@ public class AppTest
         assertTrue( true );
     }
 
-    public void testAppEvenMoreTimes()
+    public void testAppEvenMoreTimes2()
     {
         assertTrue( true );
     }
