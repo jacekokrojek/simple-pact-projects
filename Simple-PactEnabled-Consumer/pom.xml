@@ -12,8 +12,8 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>11</maven.compiler.source>
-    <maven.compiler.target>11</maven.compiler.target>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
 
   <dependencies>
@@ -76,6 +76,21 @@
         <plugin>
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <version>3.0.0</version>
+        </plugin>
+        <plugin>
+            <groupId>au.com.dius</groupId>
+            <artifactId>pact-jvm-provider-maven</artifactId>
+            <version>4.0.0</version>
+            <configuration>
+              <!-- <pactDirectory>path/to/pact/files</pactDirectory> Defaults to ${project.build.directory}/pacts -->
+              <pactBrokerUrl>http://18.194.74.172:9292</pactBrokerUrl>
+              <!-- <projectVersion>1.0.100</projectVersion> Defaults to ${project.version} -->
+              <!-- <trimSnapshot>true</trimSnapshot> Defaults to false -->
+              <!-- <skipPactPublish>false</skipPactPublish> Defaults to false -->
+              <!-- <tags>
+                <tag>feature/feature_name</tag>
+              </tags> -->
+            </configuration>
         </plugin>
       </plugins>
     </pluginManagement>
