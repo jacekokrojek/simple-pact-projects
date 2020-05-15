@@ -20,7 +20,7 @@ public class SimpleClientTest {
     @Test
     @PactVerification("simple_provider")
     public void runTest() throws IOException {
-        assertEquals(new SimpleClient(mockProvider.getUrl()).getSimple("22"), 0);
+        assertEquals(new SimpleClient(mockProvider.getUrl()).getSimple("23"), 0);
     }
 
     @Pact(provider="simple_provider", consumer="simple_consumer")
