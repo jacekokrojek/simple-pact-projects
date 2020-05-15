@@ -7,11 +7,7 @@ on:
   push:
     branches: [ master ]
     paths:
-    - 'Simple-PactEnabled-Provider/*'  
-  pull_request:
-    branches: [ master ]
-    paths:
-    - 'Simple-PactEnabled-Provider/*'  
+    - 'Simple-PactEnabled-Provider/**/*'  
   repository_dispatch:
     branches: [ master ]
     
