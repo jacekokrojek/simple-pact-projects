@@ -31,7 +31,7 @@ public class SimpleClientTest {
                 .method("GET")
                 .willRespondWith()
                 .status(200)
-                .body("{\"hello\": \"harry\"}")
+                .body("{\"hello\": \"barry\"}")
                 .toPact();
     }
 
