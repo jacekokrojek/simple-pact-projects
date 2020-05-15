@@ -34,4 +34,4 @@ jobs:
     - name: unzip pack-broker cli
       run: tar -zxvf pact-1.84.0-linux-x86.tar.gz  
     - name: can I deploy
-      run: chmod a+x pact/bin/pact-broker & pact/bin/pact-broker can-i-deploy --retry-while-unknown --pacticipant=simple_consumer -b http://18.194.74.172:9292/ --latest  
+      run: chmod a+x pact/bin/pact-broker & pact/bin/pact-broker can-i-deploy --pacticipant=simple_consumer -b http://18.194.74.172:9292/ --latest --retry-while-unknown=5 
